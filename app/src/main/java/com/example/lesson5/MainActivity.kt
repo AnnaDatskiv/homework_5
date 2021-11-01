@@ -7,26 +7,19 @@ import com.example.lesson5.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-val build=ActivityMainBinding.inflate(layoutInflater)
+        val build = ActivityMainBinding.inflate(layoutInflater)
         setContentView(build.root)
 
-        build.first.apply {
-            setOnClickListener {
+        build.apply {
+            first.setOnClickListener {
                 build.mainText.setTextColor(getColor(R.color.purple_700))
             }
-        }
-
-                build.second.apply {
-            setOnClickListener {
+            second.setOnClickListener {
                 build.mainText.setTextColor(getColor(R.color.black))
             }
-        }
-
-        build.third.apply {
-            setOnClickListener {
+            third.setOnClickListener {
                 build.mainText.setTextColor(getColor(R.color.teal_700))
             }
         }
-
     }
 }
